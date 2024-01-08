@@ -1,0 +1,17 @@
+<html lang="ja"><head><meta charset="utf-8"></head>
+  <body>
+    <h1>INIAD時間割サイト</h1>
+
+    {% if user.is_authenticated %}
+    <p>{{ user.username }}の時間割</p>
+    <a href="{% url 'logout' %}">logout</a>
+    {% else %}
+    <p>ログインで時間割を見ることが出来ます。</p>
+    <p><a href="{% url 'login' %}">login</a></p>
+    {% endif %}
+
+    <hr>
+    <p><a href="{% url 'priv' %}">priv</a></p>
+    <p><a href="{% url 'pub' %}">public</a></p>
+</body>
+</html>
