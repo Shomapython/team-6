@@ -5,17 +5,17 @@ import json
 
 # ここにデータを配列として定義
 sample_data = [
-    {"id": 'admin', "name": "ソフトウェアエンジニアリング","day":"月曜日","time":"9:00"},
-    {"id": 'admin', "name": "データベース","day":"火曜日","time":"10:40"},
-    {"id": 'admin', "name": "情報連携実習3","day":"火曜日","time":"14:45"},
-    {"id": 'admin', "name": "情報連携基礎演習","day":"水曜日","time":"13:00"},
-    {"id": 'admin', "name": "コンピュータシステム","day":"木曜日","time":"13:00"},
-    {"id": 'admin', "name": "情報連携エンジニアリング演習","day":"金曜日","time":"16:30"},
-    {"id": 2, "name": "CS概論","day":"月曜日","time":"9:00"},
-    {"id": 2, "name": "コンピュータ・アーキテクチャ","day":"火曜日","time":"10:40"},
-    {"id": 2, "name": "ビジネス演習","day":"水曜日","time":"13:00"},
-    {"id": 2, "name": "経営論","day":"木曜日","time":"13:00"},
-    {"id": 2, "name": "情報連携実習2","day":"金曜日","time":"16:30"},
+    {"id": 'admin', "name": "ソフトウェアエンジニアリング","day":"月曜日","time":"9:00","url":"https://moocs.iniad.org/courses/2023/CS118"},
+    {"id": 'admin', "name": "データベース","day":"火曜日","time":"10:40","url":"https://moocs.iniad.org/courses/2023/DS106"},
+    {"id": 'admin', "name": "情報連携実習3b","day":"火曜日","time":"14:45","url":"https://moocs.iniad.org/courses/2023/CS121"},
+    {"id": 'admin', "name": "情報連携基礎演習","day":"水曜日","time":"13:00","url":"https://moocs.iniad.org/courses/2023/CS110"},
+    {"id": 'admin', "name": "コンピュータシステム","day":"木曜日","time":"13:00","url":"https://moocs.iniad.org/courses/2023/CS113"},
+    {"id": 'admin', "name": "情報連携エンジニアリング演習","day":"金曜日","time":"16:30","url":"https://moocs.iniad.org/courses/2023/CS120"},
+    {"id": "litchi", "name": "CS概論","day":"月曜日","time":"9:00","url":"https://moocs.iniad.org/courses/2022/IE111"},
+    {"id": "litchi", "name": "コンピュータ・アーキテクチャ","day":"火曜日","time":"10:40","url":"https://moocs.iniad.org/courses/2023/CS102"},
+    {"id": "litchi", "name": "ビジネス演習","day":"水曜日","time":"13:00","url":"https://moocs.iniad.org/courses/2022/BI105"},
+    {"id": "litchi", "name": "会計論","day":"木曜日","time":"13:00","url":"https://moocs.iniad.org/courses/2022/BK102"},
+    {"id": "litchi", "name": "情報連携実習2b","day":"金曜日","time":"16:30","url":"https://moocs.iniad.org/courses/2022/CS109"},
 ]
 
 # ホームページのビュー
