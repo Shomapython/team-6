@@ -1,6 +1,48 @@
-<html lang="ja"><head><meta charset="utf-8"></head>
-  <body>
-    <h1>Private</h1>
-    <p>Super secret contents</p>
-  </body>
+<!-- authtest/private.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Private Page</title>
+</head>
+<body>
+    <h1>Private Page</h1>
+
+    <!-- 既存の授業一覧セクション -->
+    {% if organized_classes %}
+    <div id="timetable-container">
+        <h2>授業一覧</h2>
+        {% for day, classes in organized_classes.items %}
+            <h3>{{ day }}</h3>
+            <ul>
+                {% for cls in classes %}
+                    <!-- 授業時間を表示し、授業名をクリックすると指定のURLに飛ぶ -->
+                    <li>{{ cls.time }} - <a href="{{ cls.url }}">{{ cls.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>該当する授業はありません。</p>
+    {% endif %}
+
+    <!-- 新しい授業一覧セクション（追加の授業はリンクなしで表示） -->
+    {% if matching_data %}
+    <div id="additional-timetable-container">
+        <h2>追加の授業一覧</h2>
+        <ul>
+            {% for item in matching_data %}
+                <li>{{ item.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <p>追加の授業はありません。</p>
+    {% endif %}
+
+    <a href="{% url 'logout' %}">logout</a>
+    <hr>
+    <p><a href="{% url 'home' %}">Home</a></p>
+</body>
 </html>

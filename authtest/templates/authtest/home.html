@@ -1,9 +1,28 @@
-<html lang="ja"><head><meta charset="utf-8"></head>
-  <body>
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>INIAD時間割サイト</title>
+</head>
+<body>
     <h1>INIAD時間割サイト</h1>
 
     {% if user.is_authenticated %}
     <p>{{ user.username }}の時間割</p>
+    <div id="timetable-container">
+        <h2>授業一覧</h2>
+        {% if matching_data %}
+            <ul>
+                {% for item in matching_data %}
+                    <li>{{ item.id }}: {{ item.name }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>該当する授業はありません。</p>
+        {% endif %}
+    </div>
     <a href="{% url 'logout' %}">logout</a>
     {% else %}
     <p>ログインで時間割を見ることが出来ます。</p>
