@@ -1,4 +1,4 @@
-#!/mnt/c/Users/iniad/Documents/team-6/venv/bin/python3
+#!/mnt/c/Users/iniad/Documents/cs_exercise/team-6/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
